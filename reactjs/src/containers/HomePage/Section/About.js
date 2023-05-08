@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
- 
+import { FacebookShareButton, FacebookIcon } from 'react-share';
+import LikeAndShare from '../../Patient/SocailPlugin/LikeAndShare';
 // Import css files
-
+import "./about.scss"
 
 class About extends Component {
     
@@ -34,6 +35,9 @@ class About extends Component {
                             <p>
                                 <FormattedMessage id="about.content"/>
                             </p>
+                            <div className='like-share-plugin'>
+                                    <LikeAndShare/>
+                            </div> 
                         </div>
                     </div>
                     </div>

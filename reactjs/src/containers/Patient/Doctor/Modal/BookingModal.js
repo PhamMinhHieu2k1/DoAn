@@ -12,6 +12,7 @@ import { postPatientBookAppoinment } from '../../../../services/userService';
 import { toast } from 'react-toastify';
 import { FormattedMessage } from 'react-intl';
 import moment from 'moment';
+import { FadeLoader } from 'react-spinners';
 
 class BookingModal extends Component {
     constructor(props){
@@ -26,7 +27,9 @@ class BookingModal extends Component {
             selectedGender:'',
             doctorId:'',
             genders:'',
-            timeType:''
+            timeType:'',
+            isLoading:false,
+            color:"#272525"
         }
     }
     capitalizeFirstLetter(string) {
@@ -99,6 +102,9 @@ class BookingModal extends Component {
 
     handleConfirmBooking= async()=>{
         console.log("booking modal", this.state);
+        this.setState({
+            isLoading:true
+        })
         // !data.email || !data.timeType || !data.doctorId || !data.date
         let date= new Date(this.state.birthday).getTime()
         let timeString= this.buildTimeBooking(this.props.dataTime)
@@ -121,6 +127,9 @@ class BookingModal extends Component {
         if(res && res.errCode===0){
             toast.success("Booking a new apponment success!")
             this.setState({
+                isLoading:false
+            })
+            this.setState({
                 fullName:'',
                 phoneNumber:'',
                 email:'',
@@ -132,6 +141,9 @@ class BookingModal extends Component {
             this.props.closeBookingClose()
         }else{
             toast.error("Booking a new apponment error!")
+            this.setState({
+                isLoading:false
+            })
         }
 
     }
@@ -175,6 +187,7 @@ class BookingModal extends Component {
         }
         console.log("data state modal",dataTime);
         return (
+            <>
             
              <Modal 
              isOpen={isOpenModal} 
@@ -193,6 +206,7 @@ class BookingModal extends Component {
                     </div>
                     <div className='booking-modal-body'>
                         {/* {JSON.stringify(dataTime)} */}
+                        <div className='doctor-in4'>
                         <div className='doctor-infor'>
                             <ProfileDoctor
                                 doctorId={doctorId}
@@ -201,8 +215,17 @@ class BookingModal extends Component {
                                 isShowLinhDetail={false}
                                 isShowPrice={true}
                             />
+                            
                         </div>
-                       
+                        <FadeLoader
+                            color={this.state.color}
+                            loading={this.state.isLoading}
+                            size={150}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                            className='loading-siner-x'
+                            />
+                        </div>
 
                         <div className='row'>
                             <div className='col-6 form-group'>
@@ -233,6 +256,7 @@ class BookingModal extends Component {
                                     onChange={(event)=>this.handleOnchangeInput(event,'address')}
                                 ></input>
                             </div>
+                            
                             <div className='col-12 form-group mt-1'>
                                 <label><FormattedMessage id="patient.booking-modal.reason"/></label>
                                 <input className='form-control mt-1'
@@ -273,8 +297,10 @@ class BookingModal extends Component {
                         </button>
                     </div>
                 </div>
+                
             </Modal>
-           
+            
+           </>
         );
     }
     }

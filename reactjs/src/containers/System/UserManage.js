@@ -124,7 +124,7 @@ class UserManage extends Component {
                 editUser={this.handleEditUser}
             />
               }
-                <div className='title text-center'>Hieu</div>
+                <div className='title text-center'>CRUD USER(1)</div>
                 <div className='mx-1'>
                   <button className='btn btn-primary px-3'
                   onClick={()=>this.handleAddNewUser()}

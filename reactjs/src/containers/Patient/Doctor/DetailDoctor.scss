@@ -1,4 +1,5 @@
 .doctor-detail-container{ 
+    position: relative;
     .intro-doctor{
         display: flex;
         padding:  20px 100px;
@@ -27,7 +28,7 @@
             }
             .down{
                 padding-top: 6px;
-                width: 60%;
+                width: 60%;                
             }
         }
     }

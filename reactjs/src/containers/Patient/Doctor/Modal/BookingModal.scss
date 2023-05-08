@@ -1,5 +1,5 @@
 .booking-modal-container{
-
+    position: relative;
     .booking-modal-content{
         display: flex;
         flex-direction: column;
@@ -24,7 +24,13 @@
         }
         .booking-modal-body{
             padding: 15px 20px;
-            min-height: 380px;
+            height: 380px;
+            .doctor-in4{
+                display: flex;
+                .doctor-infor{
+                    width: 70%;
+                }
+            }
 
         }
         .booking-modal-footer{
@@ -55,4 +61,5 @@
             }
         }
     }
+    
 }

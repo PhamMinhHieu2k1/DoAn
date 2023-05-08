@@ -208,7 +208,7 @@ class UserRedux extends Component {
         let {email,password,firstName,lastName,phoneNumber,address,gender,position,role,avatar}=this.state
         return (
             <div className='user-redux-container'>
-                <div className='title'>User Redux</div>
+                <div className='title'>CRUD USER</div>
                 <div className="user-redux-body" >
                         <div className='container mb-5'>
                             <div className='row'>

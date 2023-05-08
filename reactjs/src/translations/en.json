@@ -4,13 +4,14 @@
         "searchdoctor":"Find a doctor by specialty",
         "health":"Health facilities",
         "chooseHospital":"Choose hospital clinic",
-        "doctor":"doctor",
+        "doctor":"Doctor",
         "chooseDoctor":"Choose a good doctor",
         "package":"Checkup package",
         "General":"General health check",
         "support":"Support",
         "welcome":"Welcome,",
-        "sreach":"Search"
+        "sreach":"Search",
+        "share":"Please share Book an online appointment on Facebook and like!"
     },
     "banner":{
         "title1":"MEDICAL BACKGROUND",
@@ -28,7 +29,7 @@
             "manage-doctor":"Manage Doctor",
             "manage-admin":"Quản lí admin",
             "crud":"CRUD user",
-            "crud-redux":"CRUD redux",
+            "crud-redux":"CRUD user(redux)",
             "clinic":"Clinic",
             "manage-clinic":"Manage clinic",
             "specialty":"Specialty",

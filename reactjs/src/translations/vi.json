@@ -4,13 +4,14 @@
         "searchdoctor":"Tìm bác sĩ theo chuyên khoa",
         "health":"Cơ sở y tế",
         "chooseHospital":"Chọn bệnh viện phòng khám",
-        "doctor":"bác sĩ",
+        "doctor":"Bác sĩ",
         "chooseDoctor":"Chọn bác sĩ giỏi",
         "package":"Gói khám",
         "General":"Khám sức khỏe tổng quát",
         "support":"Hỗ trợ",
         "welcome":"Xin chào,",
-        "sreach":"Tìm kiếm"
+        "sreach":"Tìm kiếm",
+        "share":"Hãy chia sẻ Đặt lịch khám Online lên Facebook và like bạn nhé!"
     },
     "banner":{
         "title1":"NỀN TẢNG Y TẾ",
@@ -28,7 +29,7 @@
             "manage-doctor":"Quản lí bác sĩ",
             "manage-admin":"Quản lí admin",
             "crud":"CRUD user",
-            "crud-redux":"CRUD redux",
+            "crud-redux":"CRUD user(redux)",
             "clinic":"Phòng khám",
             "manage-clinic":"Quản lí phòng khám",
             "specialty":"Chuyên khoa",

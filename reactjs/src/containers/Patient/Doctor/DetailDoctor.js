@@ -7,6 +7,8 @@ import {languages} from "../../../utils"
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
 
+
+
 class DetailDoctor extends Component {
     constructor(props){
         super(props)
@@ -49,7 +51,7 @@ class DetailDoctor extends Component {
              nameVi=`${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
              nameEn=`${detailDoctor.positionData.valueEn}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
         }
-
+       
         return (
            <React.Fragment>
                 <HomeHeader isshowBanner={false}/>
@@ -72,7 +74,10 @@ class DetailDoctor extends Component {
                                         }
                                     </span>
                                 }
+                               
+                               
                             </div>
+                              
                         </div>
                     </div>
                     <div className='schedule-doctor'>

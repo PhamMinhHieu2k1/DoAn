@@ -8,6 +8,8 @@ import { toast } from 'react-toastify';
 import { languages } from '../../../utils';
 import RemedyModal from './RemedyModal';
 import { FormattedMessage } from 'react-intl';
+import { FadeLoader } from 'react-spinners';
+
 
 class ManagePatient extends Component {
     constructor(props){
@@ -16,7 +18,9 @@ class ManagePatient extends Component {
             currentDate:moment(new Date()).startOf('day').valueOf(),
             dataPatient:[],
             isOpenRemedyModal:false,
-            dataModal:{}
+            dataModal:{},
+            isLoading:false,
+            color:"#272525"
         }
     }
     capitalizeFirstLetter(string) {
@@ -85,6 +89,9 @@ class ManagePatient extends Component {
 
     sendRemedy=async(dataChild)=>{
         let dataModal= this.state.dataModal
+        this.setState({
+            isLoading:true
+        })
         let res=await postSendRemedy({
             email:dataChild.email,
             imgBase64:dataChild.imgBase64,
@@ -96,10 +103,16 @@ class ManagePatient extends Component {
         })
         if(res && res.errCode===0){
             toast.success("Send Remedy success!")
+            this.setState({
+                isLoading:false
+            })
             this.closeRemedyModal()
             await this.getDataPatient()
         }else{
             toast.error("Send Remedy error!")
+            this.setState({
+                isLoading:false
+            })
             console.log("Send Remedy error!", res);
         }
     }
@@ -180,6 +193,14 @@ class ManagePatient extends Component {
                 dataModal={dataModal}
                 closeRemedyModal={this.closeRemedyModal}
                 sendRemedy={this.sendRemedy}
+            />
+            <FadeLoader
+                color={this.state.color}
+                loading={this.state.isLoading}
+                size={150}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+                className='loading-siner'
             />
            </>
         );

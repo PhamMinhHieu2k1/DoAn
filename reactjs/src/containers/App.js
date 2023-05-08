@@ -25,7 +25,9 @@ import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import DetailClinic from './Patient/Clinic/DetailClinic';
 
 
+
 class App extends Component {
+    
 
     handlePersistorState = () => {
         const { persistor } = this.props;
@@ -50,7 +52,7 @@ class App extends Component {
             <Fragment>
                 <Router history={history}>
                     <div className="main-container">
-                        
+                    
                         <div className="content-container">
                         <CustomScrollbars style={{height:"100vh" , width:"100%"}}>
                             <Switch>
@@ -87,8 +89,11 @@ class App extends Component {
                         />
                             {/* Same as */}
                         <ToastContainer />
+                        
                     </div>
+                   
                 </Router>
+                
             </Fragment>
         )
     }
