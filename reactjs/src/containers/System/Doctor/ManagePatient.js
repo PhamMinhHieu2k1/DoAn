@@ -9,6 +9,8 @@ import { languages } from '../../../utils';
 import RemedyModal from './RemedyModal';
 import { FormattedMessage } from 'react-intl';
 import { FadeLoader } from 'react-spinners';
+import * as actions from "../../../store/actions"
+
 
 
 class ManagePatient extends Component {
@@ -89,6 +91,7 @@ class ManagePatient extends Component {
 
     sendRemedy=async(dataChild)=>{
         let dataModal= this.state.dataModal
+        console.log("datachild", dataChild);
         this.setState({
             isLoading:true
         })
@@ -103,6 +106,7 @@ class ManagePatient extends Component {
         })
         if(res && res.errCode===0){
             toast.success("Send Remedy success!")
+            this.props.DeleteUserS3(dataChild.email.patientId)
             this.setState({
                 isLoading:false
             })
@@ -119,7 +123,7 @@ class ManagePatient extends Component {
 
     render() {
 
-        console.log("check state patient", this.state);
+        
         let dataPatient= this.state.dataPatient
         let isOpenRemedyModal= this.state.isOpenRemedyModal
         let dataModal= this.state.dataModal
@@ -217,6 +221,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        DeleteUserS3: (id)=> dispatch(actions.DeleteUserStart(id))
     };
 };
 

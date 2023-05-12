@@ -122,7 +122,8 @@ class BookingModal extends Component {
             timeType:this.state.timeType,
             language: this.props.language,
             timeString:timeString,
-            doctorName:doctorName
+            doctorName:doctorName,
+            
         })
         if(res && res.errCode===0){
             toast.success("Booking a new apponment success!")
@@ -185,6 +186,7 @@ class BookingModal extends Component {
         if(dataTime && !_.isEmpty(dataTime)){
             doctorId=dataTime.doctorId
         }
+        
         console.log("data state modal",dataTime);
         return (
             <>

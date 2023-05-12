@@ -55,12 +55,13 @@ class LikeAndShare extends Component {
 
 
     render() {
+        let dataHref=this.props.dataHref
         return (
             
            <>
             <div 
                 class="fb-like" 
-                data-href="https://bookingcare.vn/" 
+                data-href={dataHref}
                 data-width="" 
                 data-layout="standard" 
                 data-action="like" 

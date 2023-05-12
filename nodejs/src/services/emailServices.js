@@ -25,8 +25,16 @@ let sendSimpleEmail=async(dataSend)=>{
 }
 let formatEmailSendWhenAskPatientToConfirm = (dataSend) => {
     let mailDetail = "";
-    // let date = dataSend.date
-    // let date = new Date(timestamp);
+    function formatDate(date) {
+      var year = date.getFullYear().toString();
+      var month = (date.getMonth() + 101).toString().substring(1);
+      var day = (date.getDate() + 100).toString().substring(1);
+      return day  + '/' + month + '/' + year;
+    }
+    let timestamp = dataSend.birthday
+    let date = new Date(timestamp);
+    var dt = formatDate(date)
+    console.log("dataSend", dataSend);
     if (dataSend.language === "vi") {
       mailDetail = `
       <h3>Xin chào ${dataSend.patientName}!</h3>
@@ -39,6 +47,7 @@ let formatEmailSendWhenAskPatientToConfirm = (dataSend) => {
       <p>Số điện thoại: ${dataSend.phoneNumber}</p>
       <p>Địa chỉ: ${dataSend.address}</p>
       <p>Lí do khám: ${dataSend.reason}</p>
+      <p>Ngày sinh: ${dt}</p>
       <p>Nếu thông tin trên là đúng, bạn vui lòng ấn vào đường link bên dưới để xác nhận đặt lịch khám!</p>
       <a href=${dataSend.redireactLink} target="_blank">Xác nhận tại đây</a>
       <p>Trân trọng!</p>

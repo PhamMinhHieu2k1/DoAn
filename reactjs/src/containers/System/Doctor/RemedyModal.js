@@ -6,6 +6,8 @@ import { toast } from 'react-toastify';
 import { FormattedMessage } from 'react-intl';
 import moment from 'moment';
 import {languages,CRUD_ACTIONS , CommonUtils} from "../../../utils"
+import * as actions from "../../../store/actions"
+
 
 
 class RemedyModal extends Component {
@@ -54,8 +56,10 @@ class RemedyModal extends Component {
         }         
     }
 
-    handleSendRemedy=()=>{
-       this.props.sendRemedy(this.state)
+    handleSendRemedy=async()=>{
+        await this.props.sendRemedy(this.state)
+    //    this.props.DeleteUserRedux(id.email.patientId)
+        console.log("state send", this.state)
     }
 
     render() {
@@ -64,6 +68,7 @@ class RemedyModal extends Component {
         let closeRemedyModal= this.props.closeRemedyModal
         let dataModal=this.props.dataModal
         let sendRemedy= this.props.sendRemedy
+        console.log("set sate send:", this.props);
        
         return (
             
@@ -123,7 +128,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        
+        DeleteUserRedux:(id)=> dispatch(actions.DeleteUserStart(id))
     };
 };
 

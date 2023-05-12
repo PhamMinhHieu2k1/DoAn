@@ -35,9 +35,9 @@ class About extends Component {
                             <p>
                                 <FormattedMessage id="about.content"/>
                             </p>
-                            <div className='like-share-plugin'>
+                            {/* <div className='like-share-plugin'>
                                     <LikeAndShare/>
-                            </div> 
+                            </div>  */}
                         </div>
                     </div>
                     </div>

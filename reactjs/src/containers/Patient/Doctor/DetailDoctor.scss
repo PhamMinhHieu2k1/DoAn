@@ -28,7 +28,10 @@
             }
             .down{
                 padding-top: 6px;
-                width: 60%;                
+                width: 60%;      
+                .like-share-plugin{
+                    margin-top: 5px;
+                }          
             }
         }
     }

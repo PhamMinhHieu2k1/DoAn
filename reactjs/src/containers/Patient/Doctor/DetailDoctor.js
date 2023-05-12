@@ -6,6 +6,8 @@ import {getDetailInfoDoctor} from "../../../services/userService"
 import {languages} from "../../../utils"
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
+import Comment from '../SocailPlugin/Comment';
+import LikeAndShare from '../SocailPlugin/LikeAndShare';
 
 
 
@@ -51,7 +53,8 @@ class DetailDoctor extends Component {
              nameVi=`${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
              nameEn=`${detailDoctor.positionData.valueEn}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
         }
-       
+        let currentURL= +process.env.REACT_APP_IS_LOCALHOST=== 1 ? "https://bookingcare.vn/" : window.location.href
+        console.log("check curentURL", window.location.href);
         return (
            <React.Fragment>
                 <HomeHeader isshowBanner={false}/>
@@ -74,7 +77,13 @@ class DetailDoctor extends Component {
                                         }
                                     </span>
                                 }
-                               
+                               <div className='like-share-plugin' > 
+                                    <LikeAndShare
+                                        dataHref={currentURL}
+                                    >
+
+                                    </LikeAndShare>
+                               </div>
                                
                             </div>
                               
@@ -100,7 +109,12 @@ class DetailDoctor extends Component {
                                 }
                     </div>
                     <div className='comment-doctor'>
+                                <Comment
+                                    dataHref={currentURL}
+                                    width={"100%"}
+                                >
 
+                                </Comment>
                     </div>
                 </div>
            </React.Fragment>
