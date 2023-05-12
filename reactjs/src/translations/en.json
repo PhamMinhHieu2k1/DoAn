@@ -97,7 +97,9 @@
             "gender":"Gender",
             "btnConfirm":"Confirm",
             "cancel":"Cancel",
-            "priceBooking":"Free booking"
+            "priceBooking":"Free booking",
+            "confirm-email":"Appointment confirmed successfully!",
+            "confirm-email-x":"Appointment does not exist or has been confirmed!"
         }
     },
     "admin":{
@@ -125,9 +127,21 @@
         "name":"FullName",
         "address":"Address",
         "gender":"Gender",
-        "confirm":"Confirm"
+        "confirm":"Confirm",
+        "no-data":"No appointment",
+        "email":"Patient email",
+        "file":"Select the prescription file",
+        "send":"Send",
+        "cancel":"Cancel",
+        "send-bill":"Send medical bills"
     },
     "about":{
         "content":"Booking an appointment online is an effective solution to help people have a suitable schedule, instead of having to rush to wait for an appointment. The hospital always tries to improve the quality of service as well as create comfort when people come to visit. Before booking a telemedicine appointment, people should find out in advance the working schedule and working time to conveniently arrange the examination schedule."
+    },
+    "handbook":{
+        "hanbook-1":"Distinguish common types of acne and how to treat acne",
+        "hanbook-2":"Ringworm: Signs? Reason? Is ringworm contagious?",
+        "hanbook-3":"What is the best method of face lift? 5 prestigious lifting addresses in Hanoi",
+        "hanbook-4":"Beware of Toenail Fungus: Symptoms, causes, and ways to treat foot fungus"
     }
 }

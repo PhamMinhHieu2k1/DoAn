@@ -181,7 +181,7 @@ class ManagePatient extends Component {
                             })
                             :
                             <tr>
-                                <td colSpan="6">Không có lịch hẹn</td>
+                                <td colSpan="6"><FormattedMessage id="doctor.no-data"/></td>
                             </tr>
                         }
                         

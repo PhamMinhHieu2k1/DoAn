@@ -98,7 +98,9 @@
             "gender":"Giới tính",
             "btnConfirm":"Xác nhận",
             "cancel":"Hủy",
-            "priceBooking":"Miễn phí đặt lịch"
+            "priceBooking":"Miễn phí đặt lịch",
+            "confirm-email":"Xác nhận lịch hẹn thành công!",
+            "confirm-email-x":"Lịch hẹn không tồn tại hoặc đã được xác nhận!"
         }
     },
     "admin":{
@@ -126,13 +128,21 @@
         "name":"Họ tên",
         "address":"Địa chỉ",
         "gender":"Giới tính",
-        "confirm":"Xác nhận"
+        "confirm":"Xác nhận",
+        "no-data":"Không có lịch hẹn",
+        "email":"Email bệnh nhân",
+        "file":"Chọn file đơn thuốc",
+        "send":"Gửi",
+        "cancel":"Hủy",
+        "send-bill":"Gửi hóa đơn khám bệnh"
     },
-    
-
     "about":{
         "content":"Đặt lịch khám trực tuyến chính là giải pháp hiệu quả giúp người dân có lịch trình phù hợp, thay vì phải vội vàng, chen chúc đến chờ lượt đặt lịch. Bệnh viện luôn cố gắng nâng cao chất lượng dịch vụ cũng như tạo sử thoải mái khi người dân đến khám. Trước khi đặt lịch khám từ xa, người dân nên tìm hiểu trước thông tin lịch làm việc, thời gian làm việc để thuận tiện sắp xếp lịch khám."
+    },
+    "handbook":{
+        "hanbook-1":"Phân biệt các loại mụn thường gặp và cách trị mụn",
+        "hanbook-2":"Bệnh hắc lào: Dấu hiệu? Nguyên nhân? Bệnh hắc lào có lây không?",
+        "hanbook-3":"Nâng cơ mặt phương pháp nào tốt? 5 Địa chỉ nâng cơ uy tín tại Hà Nội ",
+        "hanbook-4":"Cảnh giác với Nấm da chân: Biểu hiện, nguyên nhân, cách chữa nấm da chân"
     }
-        
-
 }

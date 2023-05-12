@@ -79,7 +79,7 @@ class RemedyModal extends Component {
             centered
             >   
                 <div className='modal-header'>
-                    <h5 className='modal-title'>Gửi hóa đơn khám bệnh </h5>
+                    <h5 className='modal-title'><FormattedMessage id="doctor.send-bill"/></h5>
                     <button type='button' className='close' aria-label='Close' onClick={closeRemedyModal}>
                         <span aria-hidden="true" >x</span>
                     </button>
@@ -88,7 +88,7 @@ class RemedyModal extends Component {
                     <div className='row'>
                         <div className='col-6 form-group'>
                             
-                                <label>Email bệnh nhân</label>
+                                <label><FormattedMessage id="doctor.email"/></label>
                                 <input 
                                     className='form-control' 
                                     type='email' 
@@ -98,7 +98,7 @@ class RemedyModal extends Component {
                            
                         </div>
                         <div className='col-6 form-group'>
-                            <label>Chọn file đơn thuốc</label>
+                            <label><FormattedMessage id="doctor.file"/></label>
                             <input 
                                 className='col-12 form-control-file' 
                                 type='file' 
@@ -108,8 +108,8 @@ class RemedyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color='primary' className='btn-send' onClick={()=>this.handleSendRemedy()}>Gửi</Button>
-                    <Button color='secondary' className='btn-send' onClick={closeRemedyModal}>Hủy</Button>
+                    <Button color='primary' className='btn-send' onClick={()=>this.handleSendRemedy()}><FormattedMessage id="doctor.send"/></Button>
+                    <Button color='secondary' className='btn-send' onClick={closeRemedyModal}><FormattedMessage id="doctor.cancel"/></Button>
                 </ModalFooter>
 
             </Modal>

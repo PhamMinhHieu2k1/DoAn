@@ -65,6 +65,7 @@ let formatEmailSendWhenAskPatientToConfirm = (dataSend) => {
       <p>Phone number:  ${dataSend.phoneNumber}</p>
       <p>Address contact:  ${dataSend.address}</p>
       <p>Reason for examination:${dataSend.reason}</p>
+      <p>Date of birth: ${dt}</p>
       <p>If the above information is correct, please click on the link below to confirm your appointment!</p>
       <a href=${dataSend.redireactLink} target="_blank">Confirm here</a>
       <p>Best regard!</p>

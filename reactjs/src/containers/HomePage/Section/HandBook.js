@@ -23,35 +23,35 @@ class HandBook extends Component {
                         <Slider {...this.props.settings}>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-1'></div>
-                                <div className='hanbook-content'>Phân biệt các loại mụn thường gặp và cách trị mụn</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-1"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-2'></div>
-                                <div className='hanbook-content'>Bệnh hắc lào: Dấu hiệu? Nguyên nhân? Bệnh hắc lào có lây không?</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-2"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-3'></div>
-                                <div className='hanbook-content'>Nâng cơ mặt phương pháp nào tốt? 5 Địa chỉ nâng cơ uy tín tại Hà Nội </div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-3"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-4'></div>
-                                <div className='hanbook-content'>Cảnh giác với Nấm da chân: Biểu hiện, nguyên nhân, cách chữa nấm da chân</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-4"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-1'></div>
-                                <div className='hanbook-content'>Phân biệt các loại mụn thường gặp và cách trị mụn</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-1"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-2'></div>
-                                <div className='hanbook-content'>Bệnh hắc lào: Dấu hiệu? Nguyên nhân? Bệnh hắc lào có lây không?</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-2"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-3'></div>
-                                <div className='hanbook-content'>Nâng cơ mặt phương pháp nào tốt? 5 Địa chỉ nâng cơ uy tín tại Hà Nội</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-3"/></div>
                             </div>
                             <div className='img-customize'>
                                 <div className='bg-image section-HandBook-4'></div>
-                                <div className='hanbook-content'>Cảnh giác với Nấm da chân: Biểu hiện, nguyên nhân, cách chữa nấm da chân</div>
+                                <div className='hanbook-content'><FormattedMessage id="handbook.hanbook-4"/></div>
                             </div>
                            
                         </Slider>
