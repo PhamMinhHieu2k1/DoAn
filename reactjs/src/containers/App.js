@@ -23,6 +23,7 @@ import Doctor from '../routes/Doctor';
 import VerifyEmail from './Patient/VerifyEmail';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import DetailClinic from './Patient/Clinic/DetailClinic';
+import Chat from './Patient/SocailPlugin/Chat';
 
 
 
@@ -93,7 +94,7 @@ class App extends Component {
                     </div>
                    
                 </Router>
-                
+                <Chat/>
             </Fragment>
         )
     }
