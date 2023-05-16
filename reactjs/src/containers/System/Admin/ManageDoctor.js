@@ -7,15 +7,15 @@ import {CRUD_ACTIONS, languages} from "../../../utils"
 
 // import react, react-markdown-editor-lite, and a markdown parser you like
 
-import * as ReactDOM from 'react-dom';
+
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 // import style manually
 import 'react-markdown-editor-lite/lib/index.css';
 
 import Select from 'react-select';
-import { every, flatMap } from 'lodash';
-import { getAllDoctors, getDetailInfoDoctor } from '../../../services/userService';
+
+import {  getDetailInfoDoctor } from '../../../services/userService';
 
 
 

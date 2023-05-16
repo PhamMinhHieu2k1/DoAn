@@ -116,26 +116,29 @@
         }
     
         .search{
-            width:fit-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            position: relative;
+            
+            // height: 40px;
+            // width:fit-content;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
             margin: 0 auto;
-            padding: 5px;
-            border-radius: 30px;
-            border: none;
-            background: #f7d800;
-            i{
-                margin: 0 5px;
-                font-size: 20px;
-            }
-            input{
-                height: 40px;
-                width: 400px;
-                background: transparent;
-                border: none;
-                outline: none;
-            }
+            // padding: 5px;
+            // border-radius: 30px;
+            // border: none;
+            // background: #f7d800;
+            // i{
+            //     margin: 0 5px;
+            //     font-size: 20px;
+            // }
+            // input{
+            //     height: 40px;
+            //     width: 400px;
+            //     background: transparent;
+            //     border: none;
+            //     outline: none;
+            // }
         }
     }
 

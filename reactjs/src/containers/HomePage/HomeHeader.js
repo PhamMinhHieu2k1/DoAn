@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import {languages} from "../../utils"
 import { changelanguageApp } from '../../store/actions/appActions';
 import { withRouter } from 'react-router';
-
+import Search from './Section/search';
 
 class HomeHeader extends Component {
 
@@ -63,8 +63,9 @@ class HomeHeader extends Component {
                         <div className='title1'><FormattedMessage id="banner.title1"/></div>
                         <div className='title2'><FormattedMessage id="banner.title2"/></div>
                         <div className='search'>
-                            <i className="fas fa-search"></i>
-                            <input className='text' placeholder="Tìm kiếm"/>
+                            {/* <i className="fas fa-search"></i>
+                            <input className='text' placeholder="Tìm kiếm"/> */}
+                            <Search/>
                         </div>
                     </div>
                     <div className='content-down'>
