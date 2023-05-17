@@ -23,7 +23,7 @@ import Doctor from '../routes/Doctor';
 import VerifyEmail from './Patient/VerifyEmail';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import DetailClinic from './Patient/Clinic/DetailClinic';
-import Chat from './Patient/SocailPlugin/Chat';
+
 
 
 
@@ -55,6 +55,8 @@ class App extends Component {
                     <div className="main-container">
                     
                         <div className="content-container">
+                        
+
                         <CustomScrollbars style={{height:"100vh" , width:"100%"}}>
                             <Switch>
                                 <Route path={path.HOME} exact component={(Home)} />
@@ -92,9 +94,8 @@ class App extends Component {
                         <ToastContainer />
                         
                     </div>
-                   
                 </Router>
-                <Chat/>
+                
             </Fragment>
         )
     }
